@@ -294,6 +294,26 @@ footer {
     color: var(--whatsapp-color);
 }
 
+.contact-link i {
+    font-size: 1.2rem;
+}
+
+.contact-link .fa-map-marker-alt {
+    color: #ff0000;
+}
+
+.contact-link:hover .fa-map-marker-alt {
+    color: #ff4444;
+}
+
+.contact-link .fa-envelope {
+    color: #4285F4;
+}
+
+.contact-link:hover .fa-envelope {
+    color: #5C9DFF;
+}
+
 .footer-bottom {
     text-align: center;
     padding-top: var(--spacing-md);
