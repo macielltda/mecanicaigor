@@ -361,23 +361,45 @@ footer {
 }
 
 @media (max-width: 768px) {
-    .menu-toggle {
-        display: block;
+    header .container {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0.5rem 1rem;
     }
 
-    header .container {
-        gap: 0.8rem;
+    .logo {
+        flex-direction: row;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    .logo-img {
+        max-width: 180px;
+    }
+
+    .whatsapp-header {
+        display: none;
+    }
+
+    .menu-toggle {
+        display: block;
+        font-size: 1.5rem;
+        color: white;
+        background: none;
+        border: none;
+        cursor: pointer;
     }
 
     nav {
         position: fixed;
-        top: 80px;
+        top: 0;
         left: -100%;
         width: 100%;
-        height: calc(100vh - 80px);
-        background-color: var(--primary-color);
+        height: 100vh;
+        background: var(--primary-color);
         transition: 0.3s;
-        padding: var(--spacing-md);
+        padding: 1rem;
     }
 
     nav.active {
@@ -386,19 +408,14 @@ footer {
 
     nav ul {
         flex-direction: column;
-        align-items: center;
-        gap: var(--spacing-md);
-    }
-
-    nav ul li {
-        width: 100%;
-        text-align: center;
+        gap: 1rem;
+        margin-top: 2rem;
     }
 
     nav ul li a {
-        display: block;
-        padding: var(--spacing-md);
         font-size: 1.2rem;
+        padding: 0.5rem;
+        display: block;
     }
 
     .hero {
@@ -548,7 +565,11 @@ footer {
     }
 
     .logo-img {
-        max-width: 220px;
+        max-width: 150px;
+    }
+
+    .menu-toggle {
+        font-size: 1.3rem;
     }
 }
 
