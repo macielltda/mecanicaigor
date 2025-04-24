@@ -58,7 +58,7 @@ header h1 {
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: 1.5rem;
+    gap: 0.5rem;
     text-align: center;
     width: auto;
     position: relative;
@@ -415,7 +415,7 @@ footer {
     }
     
     .logo {
-        gap: 1rem;
+        gap: 0.4rem;
     }
     
     .logo-img {
@@ -424,7 +424,7 @@ footer {
     
     .whatsapp-link {
         font-size: 1rem;
-        padding: 0.4rem 1rem;
+        padding: 0.3rem 0.8rem;
     }
 
     .menu-toggle {
@@ -562,7 +562,7 @@ footer {
     
     .whatsapp-link {
         font-size: 1rem;
-        padding: 0.4rem 1rem;
+        padding: 0.3rem 0.8rem;
     }
     
     .whatsapp-link i {
@@ -585,7 +585,7 @@ footer {
     }
     
     .logo {
-        gap: 0.8rem;
+        gap: 0.3rem;
     }
     
     .logo-img {
@@ -594,7 +594,7 @@ footer {
     
     .whatsapp-link {
         font-size: 0.9rem;
-        padding: 0.3rem 0.8rem;
+        padding: 0.2rem 0.7rem;
     }
 
     :root {
@@ -657,12 +657,12 @@ footer {
     }
 
     .logo {
-        gap: 0.8rem;
+        gap: 0.3rem;
     }
     
     .whatsapp-link {
         font-size: 0.9rem;
-        padding: 0.3rem 0.8rem;
+        padding: 0.2rem 0.7rem;
     }
     
     .whatsapp-link i {
@@ -884,7 +884,7 @@ footer {
     font-size: 1.1rem;
     transition: all 0.3s ease;
     background-color: rgba(37, 211, 102, 0.1);
-    padding: 0.5rem 1.2rem;
+    padding: 0.4rem 1rem;
     border-radius: 25px;
     white-space: nowrap;
 }
