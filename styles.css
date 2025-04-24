@@ -99,23 +99,41 @@ nav ul li a[href="#agendamento"] {
 
 /* Hero Section */
 .hero {
-    padding: 8rem 2rem 4rem;
+    padding: 5rem 2rem 3rem;
     text-align: center;
     background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
                 url('https://images.unsplash.com/photo-1541899481282-d53bffe3c35d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
     background-size: cover;
     background-position: center;
     color: white;
-    min-height: 60vh;
+    min-height: 40vh;
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative;
+}
+
+.hero .container {
+    position: relative;
+    z-index: 2;
 }
 
 .hero h2 {
-    font-size: 2.5rem;
-    margin-bottom: var(--spacing-md);
+    font-size: 2rem;
+    margin-bottom: var(--spacing-sm);
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    color: white;
+}
+
+.hero p {
+    font-size: 1.4rem;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    color: white;
+    margin-bottom: var(--spacing-sm);
+}
+
+.hero p:last-child {
+    margin-bottom: 0;
 }
 
 /* Formulário */
@@ -325,11 +343,16 @@ footer {
     }
 
     .hero {
-        padding: 6rem 1rem 3rem;
+        padding: 4rem 1rem 2rem;
+        min-height: 30vh;
     }
 
     .hero h2 {
-        font-size: 1.75rem;
+        font-size: 1.5rem;
+    }
+
+    .hero p {
+        font-size: 1.2rem;
     }
 
     .servicos-grid, .galeria-wrapper {
