@@ -452,6 +452,18 @@ footer {
         transform: scale(0.8);
         transform-origin: center;
     }
+
+    .endereco-container h4 {
+        font-size: 1rem;
+    }
+    
+    .endereco-link {
+        padding: var(--spacing-sm);
+    }
+    
+    .mapa-container {
+        margin: var(--spacing-md) 0;
+    }
 }
 
 @media (max-width: 480px) {
@@ -546,4 +558,44 @@ footer {
     will-change: transform;
     backface-visibility: hidden;
     transform: translateZ(0);
+}
+
+/* Estilos para o endereço e mapa */
+.endereco-container {
+    margin-top: var(--spacing-md);
+}
+
+.endereco-container h4 {
+    color: var(--accent-color);
+    font-size: 1.1rem;
+    margin-bottom: var(--spacing-sm);
+}
+
+.endereco-link {
+    display: inline-block;
+    padding: var(--spacing-sm) var(--spacing-md);
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.endereco-link:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+}
+
+.mapa-container {
+    margin-top: var(--spacing-md);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.mapa-iframe {
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.mapa-iframe:hover {
+    transform: scale(1.02);
 } 
