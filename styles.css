@@ -318,33 +318,28 @@ footer {
     text-decoration: none;
     display: flex;
     align-items: center;
-    gap: var(--spacing-sm);
-    margin-bottom: var(--spacing-sm);
-    transition: color 0.3s;
+    gap: 0.8rem;
+    margin-bottom: 0.8rem;
+    transition: all 0.3s ease;
 }
 
 .contact-link:hover {
     color: var(--whatsapp-color);
+    transform: translateX(5px);
 }
 
 .contact-link i {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
+    width: 1.5rem;
+    text-align: center;
 }
 
-.contact-link .fa-map-marker-alt {
-    color: #ff0000;
-}
-
-.contact-link:hover .fa-map-marker-alt {
-    color: #ff4444;
+.contact-link .fa-whatsapp {
+    color: var(--whatsapp-color);
 }
 
 .contact-link .fa-envelope {
     color: #4285F4;
-}
-
-.contact-link:hover .fa-envelope {
-    color: #5C9DFF;
 }
 
 .footer-bottom {
@@ -444,7 +439,12 @@ footer {
     }
 
     .contact-link {
-        justify-content: center;
+        gap: 0.6rem;
+        margin-bottom: 0.6rem;
+    }
+
+    .contact-link i {
+        font-size: 1.2rem;
     }
 
     .destaque {
@@ -592,6 +592,15 @@ footer {
     }
     
     .whatsapp-link i {
+        font-size: 1.1rem;
+    }
+
+    .contact-link {
+        gap: 0.5rem;
+        margin-bottom: 0.5rem;
+    }
+    
+    .contact-link i {
         font-size: 1.1rem;
     }
 }
