@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oficina Mecânica Igor</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="https://lh3.googleusercontent.com/d/1mQCRjv3r_ynKLUkYLbrTQrdsBgTwBczd" alt="Oficina Mecânica Igor" class="logo-img">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#inicio">Início</a></li>
+                    <li><a href="#servicos">Serviços</a></li>
+                    <li><a href="#agendamento">Agendamento</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="inicio" class="hero">
+            <div class="container">
+                <h2>Seu carro em boas mãos</h2>
+                <p>Serviços de qualidade e profissionais experientes</p>
+            </div>
+        </section>
+
+        <section id="agendamento" class="agendamento">
+            <div class="container">
+                <h2>Agende seu atendimento</h2>
+                <form id="form-agendamento">
+                    <div class="form-group">
+                        <label for="nome">Nome completo:</label>
+                        <input type="text" id="nome" name="nome" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="telefone">Telefone:</label>
+                        <input type="tel" id="telefone" name="telefone" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="marca">Marca do veículo:</label>
+                        <select id="marca" name="marca" required>
+                            <option value="">Selecione a marca</option>
+                            <option value="volkswagen">Volkswagen</option>
+                            <option value="fiat">Fiat</option>
+                            <option value="chevrolet">Chevrolet</option>
+                            <option value="ford">Ford</option>
+                            <option value="toyota">Toyota</option>
+                            <option value="honda">Honda</option>
+                            <option value="hyundai">Hyundai</option>
+                            <option value="renault">Renault</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="modelo">Modelo:</label>
+                        <input type="text" id="modelo" name="modelo" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="ano">Ano de fabricação:</label>
+                        <input type="number" id="ano" name="ano" min="1980" max="2024" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="problema">Descreva o problema:</label>
+                        <textarea id="problema" name="problema" rows="4" required></textarea>
+                    </div>
+
+                    <a href="https://wa.me/5531996519655" target="_blank" class="btn">Agendar via WhatsApp</a>
+                </form>
+            </div>
+        </section>
+
+        <section id="servicos" class="servicos">
+            <div class="container">
+                <h2>Nossos Serviços</h2>
+                <div class="servicos-grid">
+                    <div class="servico-card">
+                        <h3>Revisão Preventiva</h3>
+                        <p>Manutenção periódica para garantir o bom funcionamento do seu veículo.</p>
+                    </div>
+                    <div class="servico-card">
+                        <h3>Troca de Óleo</h3>
+                        <p>Troca de óleo e filtros com produtos de qualidade.</p>
+                    </div>
+                    <div class="servico-card">
+                        <h3>Freios</h3>
+                        <p>Manutenção e troca de pastilhas e discos de freio.</p>
+                    </div>
+                    <div class="servico-card">
+                        <h3>Retífica Completa de Motor</h3>
+                        <p>Serviço especializado em retífica e recuperação de motores.</p>
+                    </div>
+                    <div class="servico-card">
+                        <h3>Reparos em Geral</h3>
+                        <p>Manutenção e reparos diversos para seu veículo.</p>
+                    </div>
+                    <div class="servico-card">
+                        <h3>Elétrica em Geral</h3>
+                        <p>Diagnóstico e reparos em sistemas elétricos automotivos.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="contato">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h3>Contato</h3>
+                    <p><a href="https://wa.me/5531996519655" target="_blank" class="contact-link"><i class="whatsapp-icon"></i>(31) 99651-9655</a></p>
+                    <p>Email: contato@oficinaigor.com.br</p>
+                    <p>Endereço: Rua Exemplo, 123 - Cidade/Estado</p>
+                </div>
+                <div class="footer-hours">
+                    <h3>Horário de Funcionamento</h3>
+                    <p>Segunda a Sexta: 8h às 18h</p>
+                    <p>Sábado: 8h às 12h</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Oficina Mecânica Igor. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html> 
