@@ -61,11 +61,32 @@ header h1 {
     gap: 0.8rem;
     text-align: center;
     width: 100%;
+    position: relative;
 }
 
 .logo-img {
     max-width: 300px;
     height: auto;
+    animation: moveCar 3s ease-in-out infinite;
+    transform-origin: center;
+}
+
+@keyframes moveCar {
+    0% {
+        transform: translateX(0) rotate(0deg);
+    }
+    25% {
+        transform: translateX(10px) rotate(1deg);
+    }
+    50% {
+        transform: translateX(0) rotate(0deg);
+    }
+    75% {
+        transform: translateX(-10px) rotate(-1deg);
+    }
+    100% {
+        transform: translateX(0) rotate(0deg);
+    }
 }
 
 .logo a {
@@ -370,6 +391,7 @@ footer {
     
     .logo-img {
         max-width: 250px;
+        animation: moveCar 3s ease-in-out infinite;
     }
     
     .whatsapp-link {
@@ -534,6 +556,7 @@ footer {
     
     .logo-img {
         max-width: 220px;
+        animation: moveCar 3s ease-in-out infinite;
     }
     
     .whatsapp-link {
