@@ -83,4 +83,34 @@ ${problema}`;
             }
         });
     });
+
+    // Gerenciamento do carregamento da galeria
+    const iframes = document.querySelectorAll('.galeria-iframe');
+    
+    iframes.forEach(iframe => {
+        iframe.addEventListener('load', function() {
+            this.classList.add('loaded');
+            this.parentElement.querySelector('.galeria-placeholder').style.display = 'none';
+        });
+    });
+
+    // Intersection Observer para carregamento lazy
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const iframe = entry.target;
+                iframe.src = iframe.dataset.src;
+                observer.unobserve(iframe);
+            }
+        });
+    }, {
+        rootMargin: '50px 0px',
+        threshold: 0.1
+    });
+
+    iframes.forEach(iframe => {
+        iframe.dataset.src = iframe.src;
+        iframe.src = '';
+        observer.observe(iframe);
+    });
 }); 
