@@ -429,12 +429,9 @@ footer {
     }
 
     .destaque {
-        padding: 0.6rem 0;
-        margin: 0.4rem 0;
-        border-width: 2px;
-        box-shadow: 0 -2px 0 0 #ff0000, 0 2px 0 0 #ff0000;
+        padding: 1rem 0;
     }
-
+    
     .destaque h2 {
         font-size: 1.4rem;
     }
@@ -463,6 +460,14 @@ footer {
     
     .mapa-container {
         margin: var(--spacing-md) 0;
+    }
+
+    .logo-destaque {
+        width: 120px;
+    }
+    
+    .destaque-content {
+        gap: 0.8rem;
     }
 }
 
@@ -503,26 +508,15 @@ footer {
 
 /* Seção de Destaque */
 .destaque {
-    background: #0430E6;
-    padding: 0.8rem 0;
+    background: linear-gradient(135deg, #001a66, #003366);
+    padding: 1.2rem 0;
     text-align: center;
     margin: 0.5rem 0;
     position: relative;
     overflow: hidden;
-    border-top: 3px solid white;
-    border-bottom: 3px solid white;
-    box-shadow: 0 -3px 0 0 #ff0000, 0 3px 0 0 #ff0000;
-}
-
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+    border-top: 3px solid rgba(255, 255, 255, 0.2);
+    border-bottom: 3px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 0 20px rgba(0, 26, 102, 0.6);
 }
 
 .destaque::before {
@@ -532,8 +526,40 @@ footer {
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(45deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 100%);
+    background: 
+        radial-gradient(circle at 20% 20%, rgba(255, 255, 255, 0.15) 0%, transparent 50%),
+        radial-gradient(circle at 80% 80%, rgba(255, 255, 255, 0.15) 0%, transparent 50%);
     z-index: 1;
+    animation: pulse 4s ease-in-out infinite;
+}
+
+.destaque::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, 
+        rgba(255, 255, 255, 0.08) 0%, 
+        rgba(255, 255, 255, 0) 50%, 
+        rgba(255, 255, 255, 0.08) 100%);
+    z-index: 1;
+}
+
+@keyframes pulse {
+    0% {
+        opacity: 0.5;
+        transform: scale(1);
+    }
+    50% {
+        opacity: 0.8;
+        transform: scale(1.1);
+    }
+    100% {
+        opacity: 0.5;
+        transform: scale(1);
+    }
 }
 
 .destaque .container {
@@ -543,14 +569,33 @@ footer {
 
 .destaque h2 {
     color: white;
-    font-size: 1.8rem;
-    font-weight: 700;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-    letter-spacing: 1px;
+    font-size: 1.6rem;
+    font-weight: 800;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+    letter-spacing: 2px;
     margin: 0;
-    font-family: 'Poppins', sans-serif;
-    animation: fadeInUp 0.8s ease-out;
+    font-family: 'Montserrat', sans-serif;
+    animation: fadeInOut 3s ease-in-out infinite;
     text-transform: uppercase;
+}
+
+@keyframes fadeInOut {
+    0% {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    20% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    80% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
 }
 
 /* Adiciona script para carregamento progressivo */
@@ -598,4 +643,52 @@ footer {
 
 .mapa-iframe:hover {
     transform: scale(1.02);
+}
+
+.destaque-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    position: relative;
+}
+
+.logo-destaque {
+    width: 180px;
+    height: auto;
+    opacity: 0;
+    position: absolute;
+    transition: all 0.5s ease-in-out;
+}
+
+.logo-esquerda {
+    left: -20px;
+    animation: logoFadeLeft 20s infinite;
+}
+
+.logo-direita {
+    right: -20px;
+    animation: logoFadeRight 20s infinite;
+}
+
+@keyframes logoFadeLeft {
+    0%, 100% {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    10%, 90% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes logoFadeRight {
+    0%, 100% {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    10%, 90% {
+        opacity: 1;
+        transform: translateX(0);
+    }
 } 
