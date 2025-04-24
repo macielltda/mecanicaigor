@@ -12,23 +12,46 @@ document.addEventListener('DOMContentLoaded', function() {
         e.target.value = value;
     });
 
-    // Validação do formulário
+    // Validação e envio do formulário
     form.addEventListener('submit', function(e) {
         e.preventDefault();
         
         // Coletar dados do formulário
-        const formData = {
-            nome: document.getElementById('nome').value,
-            telefone: document.getElementById('telefone').value,
-            marca: document.getElementById('marca').value,
-            modelo: document.getElementById('modelo').value,
-            ano: document.getElementById('ano').value,
-            problema: document.getElementById('problema').value
-        };
+        const nome = document.getElementById('nome').value;
+        const telefone = document.getElementById('telefone').value;
+        const marca = document.getElementById('marca').value;
+        const modelo = document.getElementById('modelo').value;
+        const ano = document.getElementById('ano').value;
+        const problema = document.getElementById('problema').value;
 
-        // Aqui você pode adicionar o código para enviar os dados para um servidor
-        // Por enquanto, vamos apenas mostrar uma mensagem de sucesso
-        alert('Agendamento realizado com sucesso! Entraremos em contato em breve.');
+        // Criar mensagem formatada para o WhatsApp
+        const mensagem = `Olá! Gostaria de agendar um serviço:
+        
+*Dados do Cliente:*
+Nome: ${nome}
+Telefone: ${telefone}
+
+*Dados do Veículo:*
+Marca: ${marca}
+Modelo: ${modelo}
+Ano: ${ano}
+
+*Descrição do Problema:*
+${problema}`;
+
+        // Codificar a mensagem para URL
+        const mensagemCodificada = encodeURIComponent(mensagem);
+        
+        // Número do WhatsApp da oficina
+        const numeroWhatsApp = '5531996519655';
+        
+        // Criar o link do WhatsApp com a mensagem
+        const linkWhatsApp = `https://wa.me/${numeroWhatsApp}?text=${mensagemCodificada}`;
+        
+        // Abrir o WhatsApp em uma nova janela
+        window.open(linkWhatsApp, '_blank');
+        
+        // Limpar o formulário
         form.reset();
     });
 
