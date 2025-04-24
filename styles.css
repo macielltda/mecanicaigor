@@ -604,6 +604,8 @@ footer {
     font-family: 'Montserrat', sans-serif;
     animation: fadeInOut 3s ease-in-out infinite;
     text-transform: uppercase;
+    position: relative;
+    z-index: 2;
 }
 
 @keyframes fadeInOut {
