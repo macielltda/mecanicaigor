@@ -516,6 +516,10 @@ footer {
     .whatsapp-link i {
         font-size: 1.2rem;
     }
+
+    .frase-destaque {
+        font-size: 1.4rem;
+    }
 }
 
 @media (max-width: 480px) {
@@ -571,6 +575,10 @@ footer {
     .menu-toggle {
         font-size: 1.3rem;
     }
+
+    .frase-destaque {
+        font-size: 1.2rem;
+    }
 }
 
 /* Seção de Destaque */
@@ -584,6 +592,7 @@ footer {
     border-top: 3px solid rgba(255, 255, 255, 0.2);
     border-bottom: 3px solid rgba(255, 255, 255, 0.2);
     box-shadow: 0 0 20px rgba(0, 26, 102, 0.6);
+    min-height: 100px;
 }
 
 .destaque::before {
@@ -634,7 +643,7 @@ footer {
     z-index: 2;
 }
 
-.destaque h2 {
+.frase-destaque {
     color: white;
     font-size: 1.6rem;
     font-weight: 800;
@@ -642,29 +651,16 @@ footer {
     letter-spacing: 2px;
     margin: 0;
     font-family: 'Montserrat', sans-serif;
-    animation: fadeInOut 3s ease-in-out infinite;
-    text-transform: uppercase;
-    position: relative;
-    z-index: 2;
+    position: absolute;
+    width: 100%;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.5s ease-in-out;
 }
 
-@keyframes fadeInOut {
-    0% {
-        opacity: 0;
-        transform: translateY(10px);
-    }
-    20% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-    80% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-    100% {
-        opacity: 0;
-        transform: translateY(-10px);
-    }
+.frase-destaque.active {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 /* Adiciona script para carregamento progressivo */

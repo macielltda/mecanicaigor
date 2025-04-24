@@ -113,4 +113,31 @@ ${problema}`;
         iframe.src = '';
         observer.observe(iframe);
     });
+
+    // Animação das frases de destaque
+    function iniciarAnimacaoFrases() {
+        const frases = document.querySelectorAll('.frase-destaque');
+        let indiceAtual = 0;
+
+        // Mostra a primeira frase
+        frases[0].classList.add('active');
+
+        // Função para alternar as frases
+        function alternarFrase() {
+            // Remove a classe active da frase atual
+            frases[indiceAtual].classList.remove('active');
+            
+            // Avança para a próxima frase
+            indiceAtual = (indiceAtual + 1) % frases.length;
+            
+            // Adiciona a classe active na nova frase
+            frases[indiceAtual].classList.add('active');
+        }
+
+        // Alterna as frases a cada 3 segundos
+        setInterval(alternarFrase, 3000);
+    }
+
+    // Inicia a animação quando a página carregar
+    iniciarAnimacaoFrases();
 }); 
