@@ -58,6 +58,16 @@ header h1 {
     padding: var(--spacing-sm) 0;
 }
 
+.logo a {
+    display: block;
+    text-decoration: none;
+    transition: transform 0.3s ease;
+}
+
+.logo a:hover {
+    transform: scale(1.05);
+}
+
 .logo-img {
     width: 100%;
     height: auto;
@@ -418,7 +428,7 @@ footer {
 
 /* Seção de Destaque */
 .destaque {
-    background: #0228AF;
+    background: #0430E6;
     padding: 0.8rem 0;
     text-align: center;
     margin: 0.5rem 0;
@@ -427,6 +437,17 @@ footer {
     border-top: 3px solid white;
     border-bottom: 3px solid white;
     box-shadow: 0 -3px 0 0 #ff0000, 0 3px 0 0 #ff0000;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .destaque::before {
@@ -447,9 +468,12 @@ footer {
 
 .destaque h2 {
     color: white;
-    font-size: 1.6rem;
+    font-size: 1.8rem;
     font-weight: 700;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
     letter-spacing: 1px;
     margin: 0;
+    font-family: 'Poppins', sans-serif;
+    animation: fadeInUp 0.8s ease-out;
+    text-transform: uppercase;
 } 
