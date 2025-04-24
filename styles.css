@@ -56,12 +56,16 @@ header h1 {
 
 .logo {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
-    gap: 0.8rem;
+    gap: 1.5rem;
     text-align: center;
-    width: 100%;
+    width: auto;
     position: relative;
+}
+
+.logo-link {
+    display: block;
 }
 
 .logo-img {
@@ -386,12 +390,11 @@ footer {
     }
     
     .logo {
-        gap: 0.6rem;
+        gap: 1rem;
     }
     
     .logo-img {
         max-width: 250px;
-        animation: moveCar 3s ease-in-out infinite;
     }
     
     .whatsapp-link {
@@ -547,16 +550,15 @@ footer {
     }
     
     header .container {
-        gap: 0.6rem;
+        gap: 0.8rem;
     }
     
     .logo {
-        gap: 0.5rem;
+        gap: 0.8rem;
     }
     
     .logo-img {
         max-width: 220px;
-        animation: moveCar 3s ease-in-out infinite;
     }
     
     .whatsapp-link {
@@ -623,7 +625,7 @@ footer {
     }
 
     .logo {
-        gap: 0.5rem;
+        gap: 0.8rem;
     }
     
     .whatsapp-link {
@@ -831,10 +833,7 @@ footer {
 }
 
 .whatsapp-header {
-    margin-top: 0.3rem;
-    width: 100%;
-    display: flex;
-    justify-content: center;
+    margin: 0;
 }
 
 .whatsapp-link {
