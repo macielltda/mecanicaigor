@@ -1,6 +1,22 @@
 document.addEventListener('DOMContentLoaded', function() {
     const form = document.getElementById('form-agendamento');
+    const menuToggle = document.querySelector('.menu-toggle');
+    const nav = document.querySelector('nav');
     
+    // Toggle do menu mobile
+    menuToggle.addEventListener('click', function() {
+        nav.classList.toggle('active');
+        document.body.classList.toggle('menu-open');
+    });
+
+    // Fechar menu ao clicar em um link
+    document.querySelectorAll('nav a').forEach(link => {
+        link.addEventListener('click', function() {
+            nav.classList.remove('active');
+            document.body.classList.remove('menu-open');
+        });
+    });
+
     // Máscara para o campo de telefone
     const telefoneInput = document.getElementById('telefone');
     telefoneInput.addEventListener('input', function(e) {
