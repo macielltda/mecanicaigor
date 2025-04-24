@@ -463,11 +463,24 @@ footer {
     }
 
     .logo-destaque {
-        width: 120px;
+        width: 80px;
     }
     
     .destaque-content {
-        gap: 0.8rem;
+        gap: 0.5rem;
+        padding: 0 0.5rem;
+    }
+
+    .destaque h2 {
+        font-size: 1.4rem;
+    }
+
+    .logo-esquerda {
+        left: -10px;
+    }
+
+    .logo-direita {
+        right: -10px;
     }
 }
 
@@ -503,6 +516,18 @@ footer {
     .btn {
         padding: 0.875rem;
         font-size: 1rem;
+    }
+
+    .logo-destaque {
+        width: 60px;
+    }
+    
+    .destaque-content {
+        gap: 0.3rem;
+    }
+
+    .destaque h2 {
+        font-size: 1.2rem;
     }
 }
 
@@ -651,6 +676,7 @@ footer {
     justify-content: center;
     gap: 1rem;
     position: relative;
+    padding: 0 1rem;
 }
 
 .logo-destaque {
