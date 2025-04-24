@@ -32,45 +32,10 @@
             </div>
         </section>
 
-        <section class="galeria">
-            <div class="container">
-                <div class="galeria-wrapper">
-                    <div class="galeria-item">
-                        <iframe src="https://drive.google.com/file/d/1mVmigkq92UG3rNu33Zb9BEQFB-tZL4JM/preview" 
-                                allow="autoplay" class="galeria-iframe"></iframe>
-                    </div>
-                    <div class="galeria-item">
-                        <iframe src="https://drive.google.com/file/d/1GqwtUSwOinxYDmncxEocOJfid6ok5_VP/preview" 
-                                allow="autoplay" class="galeria-iframe"></iframe>
-                    </div>
-                    <div class="galeria-item">
-                        <iframe src="https://drive.google.com/file/d/1qRfX7CP0pcnQSi2PQS0tIhNtcEjjtckL/preview" 
-                                allow="autoplay" class="galeria-iframe"></iframe>
-                    </div>
-                    <div class="galeria-item">
-                        <iframe src="https://drive.google.com/file/d/1u-2AswgTDipcGf8uxOqYyeG5yuxX4o5w/preview" 
-                                allow="autoplay" class="galeria-iframe"></iframe>
-                    </div>
-                    <div class="galeria-item">
-                        <iframe src="https://drive.google.com/file/d/1q9tcHJq2c7IWcxJNRMwk4ODYSAmPci2u/preview" 
-                                allow="autoplay" class="galeria-iframe"></iframe>
-                    </div>
-                    <div class="galeria-item">
-                        <iframe src="https://drive.google.com/file/d/1U3yGCzH76iBXgriieYSxRSEeRfSGdZbx/preview" 
-                                allow="autoplay" class="galeria-iframe"></iframe>
-                    </div>
-                    <div class="galeria-item">
-                        <iframe src="https://drive.google.com/file/d/1EOV6W8rjlnniYe5QWvWh8HMkUkdVYzQ2/preview" 
-                                allow="autoplay" class="galeria-iframe"></iframe>
-                    </div>
-                </div>
-            </div>
-        </section>
-
         <section id="agendamento" class="agendamento">
             <div class="container">
                 <h2>Agende seu atendimento</h2>
-                <form id="form-agendamento">
+                <form id="form-agendamento" onsubmit="return false;">
                     <div class="form-group">
                         <label for="nome">Nome completo:</label>
                         <input type="text" id="nome" name="nome" required>
@@ -111,7 +76,7 @@
                         <textarea id="problema" name="problema" rows="4" required></textarea>
                     </div>
 
-                    <button type="submit" class="btn">Enviar Agendamento via WhatsApp</button>
+                    <button type="submit" class="btn" onclick="enviarParaWhatsApp()">Enviar Agendamento via WhatsApp</button>
                 </form>
             </div>
         </section>
@@ -143,6 +108,42 @@
                     <div class="servico-card">
                         <h3>Elétrica em Geral</h3>
                         <p>Diagnóstico e reparos em sistemas elétricos automotivos.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="galeria">
+            <div class="container">
+                <h2>Nossa Oficina em Imagens</h2>
+                <div class="galeria-wrapper">
+                    <div class="galeria-item">
+                        <iframe src="https://drive.google.com/file/d/1mVmigkq92UG3rNu33Zb9BEQFB-tZL4JM/preview" 
+                                allow="autoplay" class="galeria-iframe"></iframe>
+                    </div>
+                    <div class="galeria-item">
+                        <iframe src="https://drive.google.com/file/d/1GqwtUSwOinxYDmncxEocOJfid6ok5_VP/preview" 
+                                allow="autoplay" class="galeria-iframe"></iframe>
+                    </div>
+                    <div class="galeria-item">
+                        <iframe src="https://drive.google.com/file/d/1qRfX7CP0pcnQSi2PQS0tIhNtcEjjtckL/preview" 
+                                allow="autoplay" class="galeria-iframe"></iframe>
+                    </div>
+                    <div class="galeria-item">
+                        <iframe src="https://drive.google.com/file/d/1u-2AswgTDipcGf8uxOqYyeG5yuxX4o5w/preview" 
+                                allow="autoplay" class="galeria-iframe"></iframe>
+                    </div>
+                    <div class="galeria-item">
+                        <iframe src="https://drive.google.com/file/d/1q9tcHJq2c7IWcxJNRMwk4ODYSAmPci2u/preview" 
+                                allow="autoplay" class="galeria-iframe"></iframe>
+                    </div>
+                    <div class="galeria-item">
+                        <iframe src="https://drive.google.com/file/d/1U3yGCzH76iBXgriieYSxRSEeRfSGdZbx/preview" 
+                                allow="autoplay" class="galeria-iframe"></iframe>
+                    </div>
+                    <div class="galeria-item">
+                        <iframe src="https://drive.google.com/file/d/1EOV6W8rjlnniYe5QWvWh8HMkUkdVYzQ2/preview" 
+                                allow="autoplay" class="galeria-iframe"></iframe>
                     </div>
                 </div>
             </div>

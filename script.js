@@ -12,11 +12,8 @@ document.addEventListener('DOMContentLoaded', function() {
         e.target.value = value;
     });
 
-    // Validação e envio do formulário
-    form.addEventListener('submit', function(e) {
-        e.preventDefault();
-        
-        // Coletar dados do formulário
+    // Função para enviar para o WhatsApp
+    window.enviarParaWhatsApp = function() {
         const nome = document.getElementById('nome').value;
         const telefone = document.getElementById('telefone').value;
         const marca = document.getElementById('marca').value;
@@ -24,9 +21,14 @@ document.addEventListener('DOMContentLoaded', function() {
         const ano = document.getElementById('ano').value;
         const problema = document.getElementById('problema').value;
 
+        if (!nome || !telefone || !marca || !modelo || !ano || !problema) {
+            alert('Por favor, preencha todos os campos!');
+            return;
+        }
+
         // Criar mensagem formatada para o WhatsApp
         const mensagem = `Olá! Gostaria de agendar um serviço:
-        
+
 *Dados do Cliente:*
 Nome: ${nome}
 Telefone: ${telefone}
@@ -39,21 +41,18 @@ Ano: ${ano}
 *Descrição do Problema:*
 ${problema}`;
 
-        // Codificar a mensagem para URL
-        const mensagemCodificada = encodeURIComponent(mensagem);
-        
         // Número do WhatsApp da oficina
         const numeroWhatsApp = '5531996519655';
         
-        // Criar o link do WhatsApp com a mensagem
-        const linkWhatsApp = `https://wa.me/${numeroWhatsApp}?text=${mensagemCodificada}`;
+        // Criar o link do WhatsApp com a mensagem codificada
+        const linkWhatsApp = `https://wa.me/${numeroWhatsApp}?text=${encodeURIComponent(mensagem)}`;
         
         // Abrir o WhatsApp em uma nova janela
         window.open(linkWhatsApp, '_blank');
         
         // Limpar o formulário
         form.reset();
-    });
+    };
 
     // Adicionar efeito de scroll suave para os links do menu
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
