@@ -448,11 +448,12 @@ footer {
     }
 
     .destaque {
-        padding: 1rem 0;
+        height: 70px;
     }
     
-    .destaque h2 {
+    .frase-destaque {
         font-size: 1.4rem;
+        padding: 0 0.8rem;
     }
 
     .galeria-wrapper {
@@ -516,10 +517,6 @@ footer {
     .whatsapp-link i {
         font-size: 1.2rem;
     }
-
-    .frase-destaque {
-        font-size: 1.4rem;
-    }
 }
 
 @media (max-width: 480px) {
@@ -576,8 +573,13 @@ footer {
         font-size: 1.3rem;
     }
 
+    .destaque {
+        height: 60px;
+    }
+    
     .frase-destaque {
         font-size: 1.2rem;
+        padding: 0 0.6rem;
     }
 }
 
@@ -592,7 +594,9 @@ footer {
     border-top: 3px solid rgba(255, 255, 255, 0.2);
     border-bottom: 3px solid rgba(255, 255, 255, 0.2);
     box-shadow: 0 0 20px rgba(0, 26, 102, 0.6);
-    min-height: 100px;
+    height: 80px;
+    display: flex;
+    align-items: center;
 }
 
 .destaque::before {
@@ -641,6 +645,10 @@ footer {
 .destaque .container {
     position: relative;
     z-index: 2;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .frase-destaque {
@@ -656,6 +664,7 @@ footer {
     opacity: 0;
     transform: translateY(20px);
     transition: all 0.5s ease-in-out;
+    padding: 0 1rem;
 }
 
 .frase-destaque.active {
