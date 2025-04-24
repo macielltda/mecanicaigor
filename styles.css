@@ -120,16 +120,15 @@ nav ul li a[href="#agendamento"] {
 
 .hero h2 {
     font-size: 2rem;
-    margin-bottom: var(--spacing-sm);
+    margin-bottom: var(--spacing-md);
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     color: white;
 }
 
 .hero p {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
     color: white;
-    margin-bottom: var(--spacing-sm);
 }
 
 .hero p:last-child {
@@ -352,7 +351,7 @@ footer {
     }
 
     .hero p {
-        font-size: 1.2rem;
+        font-size: 1rem;
     }
 
     .servicos-grid, .galeria-wrapper {
@@ -367,6 +366,17 @@ footer {
 
     .contact-link {
         justify-content: center;
+    }
+
+    .destaque {
+        padding: 0.6rem 0;
+        margin: 0.4rem 0;
+        border-width: 2px;
+        box-shadow: 0 -2px 0 0 #ff0000, 0 2px 0 0 #ff0000;
+    }
+
+    .destaque h2 {
+        font-size: 1.4rem;
     }
 }
 
@@ -392,4 +402,42 @@ footer {
         padding: 0.875rem;
         font-size: 1rem;
     }
+}
+
+/* Seção de Destaque */
+.destaque {
+    background: #0228AF;
+    padding: 0.8rem 0;
+    text-align: center;
+    margin: 0.5rem 0;
+    position: relative;
+    overflow: hidden;
+    border-top: 3px solid white;
+    border-bottom: 3px solid white;
+    box-shadow: 0 -3px 0 0 #ff0000, 0 3px 0 0 #ff0000;
+}
+
+.destaque::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 100%);
+    z-index: 1;
+}
+
+.destaque .container {
+    position: relative;
+    z-index: 2;
+}
+
+.destaque h2 {
+    color: white;
+    font-size: 1.6rem;
+    font-weight: 700;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    letter-spacing: 1px;
+    margin: 0;
 } 
